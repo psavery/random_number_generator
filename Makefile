@@ -1,6 +1,6 @@
 PROGRAM = generateRandoms
 PROGSRC = main.cpp rng.cpp
-CXXFLAGS = -g -std=c++11
+CXXFLAGS = -O3 -std=c++11
 #CXX = icpc
 #CXXLIBS = -mkl
 OBJECTS = $(PROGSRC:%.cc=%.o)
