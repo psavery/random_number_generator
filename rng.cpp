@@ -1,15 +1,18 @@
 #include <random>
-#include <chrono>
 
 #include "rng.h"
 
 namespace rng {
 
-  int rng::generateRandomNumber(int low, int high)
+  std::vector<int> rng::generateRandomIntVector(int size, int low, int high)
   {
-    unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
-    std::default_random_engine generator (seed);
-    std::uniform_int_distribution<int> distribution(low, high);
-    return distribution(generator);
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<std::uintmax_t> dis(low, high);
+    std::vector<int> list;
+    for (size_t i = 0; i < size; i++) {
+      list.push_back(dis(gen));
+    }
+    return list;
   }
 }

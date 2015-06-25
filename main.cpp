@@ -12,8 +12,12 @@ int main(int argc, char* argv[])
     return 1;
   }
 
-  for (size_t i = 0; i < atoi(argv[1]); i++) {
-    std::cout << rng::rng::generateRandomNumber(atoi(argv[2]), atoi(argv[3])) << std::endl;
+  std::vector<int> list = rng::rng::generateRandomIntVector(
+                            atoi(argv[1]), atoi(argv[2]), atoi(argv[3]));
+
+  for (size_t i = 0; i < list.size(); i++) {
+    std::cout << list[i] << std::endl;
   }
+
 }
 

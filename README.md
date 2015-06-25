@@ -1,4 +1,4 @@
-Program generates a list of random integers.
+Program generates a vector of random integers.
 
 After downloading, simply type "make" to install.
 
