@@ -8,4 +8,4 @@ After downloading, simply type "make" to install.
 2. The smallest number in the range of random numbers to be generated.
 3. The largest number in the range of random numbers to be generated.
 
-To add the random generator to your program, simply add rng.h and rng.cpp to your program. Then, #include "rng." in the file you wish to use it in.
+To add the random generator to your program, simply add rng.h and rng.cpp to your program. Then, #include "rng.h" in the file you wish to use it in.
